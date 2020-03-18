@@ -1458,7 +1458,7 @@ PrefabInstance:
     - target: {fileID: 5061976347179310128, guid: b532b2877f851c844acbada0b17b7752,
         type: 3}
       propertyPath: acccuracyOffset
-      value: 5
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 5061976347179310131, guid: b532b2877f851c844acbada0b17b7752,
         type: 3}
@@ -1550,6 +1550,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lazer
       objectReference: {fileID: 0}
+    - target: {fileID: 3484800892595756309, guid: fbd65e3c84b4c484daabcbe47091a773,
+        type: 3}
+      propertyPath: yOffset
+      value: 17.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3484800892595756310, guid: fbd65e3c84b4c484daabcbe47091a773,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1558,7 +1563,7 @@ PrefabInstance:
     - target: {fileID: 3484800892595756310, guid: fbd65e3c84b4c484daabcbe47091a773,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.6
+      value: 8.62
       objectReference: {fileID: 0}
     - target: {fileID: 3484800892595756310, guid: fbd65e3c84b4c484daabcbe47091a773,
         type: 3}

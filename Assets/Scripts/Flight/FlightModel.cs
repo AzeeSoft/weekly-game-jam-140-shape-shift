@@ -12,7 +12,7 @@ public enum FlightShape
 
 public class FlightModel : MonoBehaviour
 {
-    public FlightShape curFlightShape { get; private set; } = FlightShape.Circle;
+    public FlightShape curFlightShape => flightController.curFlightShape;
 
     public Rigidbody rigidbody { get; private set; }
     public FlightController flightController { get; private set; }

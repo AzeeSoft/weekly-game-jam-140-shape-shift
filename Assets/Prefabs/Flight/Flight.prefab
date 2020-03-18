@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 180526978}
   - component: {fileID: 180526977}
   - component: {fileID: 180526976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 1201535288}
   - component: {fileID: 1201535287}
   - component: {fileID: 1201535286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 1614744007}
   - component: {fileID: 1614744006}
   - component: {fileID: 1614744005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 1643578386}
   - component: {fileID: 1643578385}
   - component: {fileID: 1643578384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,8 @@ GameObject:
   - component: {fileID: 2825473634752686227}
   - component: {fileID: 4041714610780700595}
   - component: {fileID: 7216930096872092891}
-  m_Layer: 0
+  - component: {fileID: 3254682828262023450}
+  m_Layer: 9
   m_Name: Flight
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -439,6 +440,10 @@ MonoBehaviour:
   flightLookStrength: 45
   flightLookAcceleration: 5
   flightCameraBoundaryOffset: 0.1
+  squareMaterial: {fileID: 2100000, guid: 01d6e653ba61d3846afc96e999c55e6f, type: 2}
+  triangleMaterial: {fileID: 2100000, guid: 5e26aa7ba464c944b8d4be8469a68b80, type: 2}
+  circleMaterial: {fileID: 2100000, guid: a2abf5de2d5c20f479556d6ea43c4f45, type: 2}
+  starMaterial: {fileID: 2100000, guid: 19e72801acd69ee4abc29079411503bc, type: 2}
   flightInput:
     horizontal: 0
     vertical: 0
@@ -471,6 +476,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &3254682828262023450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825473634752686225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 6adde24fff876e7478ab1b274ed5cfcd,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2825473636179703795
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2825473636179703796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2825473636754864100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TestFlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7468256340467297144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CamFollowTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434506215733989807}
   - component: {fileID: 7350077160808649583}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6856040186668825492}
   - component: {fileID: 8094929460179541782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

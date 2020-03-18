@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
+    [System.Serializable]
+    public class PlayerSettings
+    {
+        public bool shouldInvertY;
+    }
+
+    [System.Serializable]
     public class GameData
     {
         public int highscore;

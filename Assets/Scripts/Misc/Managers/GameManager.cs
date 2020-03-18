@@ -30,6 +30,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         if (tempData == null)
         {
             tempData.highscore = 100;
+            tempData.highscorePlayerName = "G.A.T.S";
             SaveSystem.SaveData<GameData>(tempData, saveFile);
         }
     }

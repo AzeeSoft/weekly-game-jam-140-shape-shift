@@ -34,7 +34,7 @@ public class FlightController : MonoBehaviour
     public FlightShape curFlightShape { get; private set; } = FlightShape.Circle;
 
     private FlightModel flightModel;
-    private Rigidbody rigidbody => flightModel.rigidbody;
+    private new Rigidbody rigidbody => flightModel.rigidbody;
 
     void Awake()
     {

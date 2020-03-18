@@ -14,7 +14,7 @@ public class FlightModel : MonoBehaviour
 {
     public FlightShape curFlightShape => flightController.curFlightShape;
 
-    public Rigidbody rigidbody { get; private set; }
+    public new Rigidbody rigidbody { get; private set; }
     public FlightController flightController { get; private set; }
     public FlightPlayerInput flightPlayerInput { get; private set; }
 

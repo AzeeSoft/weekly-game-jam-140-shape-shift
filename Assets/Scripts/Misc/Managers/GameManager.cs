@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
-    public string saveFile;
+    [System.Serializable]
+    public class PlayerSettings
+    {
+        public bool shouldInvertY;
+    }
+
+    [System.Serializable]
     public class GameData
     {
         public int highscore;
         public string highscorePlayerName;
+        public PlayerSettings playerSettings;
     }
+
+    public string saveFile;
 
     new void Awake()
     {
@@ -25,12 +34,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-        GameData tempData = SaveSystem.LoadData<GameData>(saveFile);
+        GameData currentData = SaveSystem.LoadData<GameData>(saveFile);
         
-        if (tempData == null)
+        if (currentData == null)
         {
-            tempData.highscore = 100;
-            tempData.highscorePlayerName = "G.A.T.S";
+            GameData tempData = new GameData
+            {
+                highscore = 100,
+                highscorePlayerName = "G.A.T.S"
+            };
+
             SaveSystem.SaveData<GameData>(tempData, saveFile);
         }
     }
@@ -41,21 +54,17 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         
     }
 
-    public void CheckandSetHighScore(int currentScore, string currentPlayerName)
+    public void CheckAndSetHighScore(int currentScore, string currentPlayerName)
     {
-        int currentHighscore = SaveSystem.LoadData<GameData>(saveFile).highscore;
+        GameData currentHighscoreData = SaveSystem.LoadData<GameData>(saveFile);
         
-        if (currentHighscore < currentScore)
+        if (currentHighscoreData.highscore < currentScore)
         {
-            currentHighscore = currentScore;
+            currentHighscoreData.highscore = currentScore;
 
-            GameData tempData = new GameData
-            {
-                highscore = currentHighscore,
-                highscorePlayerName = currentPlayerName
-            };
+            currentHighscoreData.highscorePlayerName = currentPlayerName;
 
-            SaveSystem.SaveData<GameData>(tempData, saveFile);
+            SaveSystem.SaveData<GameData>(currentHighscoreData, saveFile);
         }
     }
 

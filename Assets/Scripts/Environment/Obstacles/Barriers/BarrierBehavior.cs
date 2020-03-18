@@ -74,7 +74,7 @@ public class BarrierBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        FlightModel otherFM = other.gameObject.GetComponent<FlightModel>();
+        FlightModel otherFM = other.gameObject.GetComponentInParent<FlightModel>();
 
         if (otherFM != null)
         {

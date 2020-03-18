@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
-    public string saveFile;
     public class GameData
     {
         public int highscore;
         public string highscorePlayerName;
     }
+
+    public string saveFile;
 
     new void Awake()
     {

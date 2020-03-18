@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatar: {fileID: 2825473636179703796}
-  flightMaxSpeed: 15
+  flightMaxSpeed: 16
   flightAcceleration: 4
   flightDeceleration: 6
   flightLookStrength: 45

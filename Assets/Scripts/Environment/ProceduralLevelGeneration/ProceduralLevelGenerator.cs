@@ -16,6 +16,11 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     public List<GameObject> proceduralLevelUnitPrefabs;
 
+    [Header("Depth Curvature Settings")]
+    [Range(-1, 1)] public float curve = 0;
+    public float maxCurve = 0;
+    [Range(0, 1)] public float minDepthForCurvature = 0;
+
     private Randomizer<GameObject> proceduralLevelUnitRandomizer;
     private List<ProceduralLevelUnit> proceduralLevelUnits = new List<ProceduralLevelUnit>();
 
@@ -42,8 +47,15 @@ public class ProceduralLevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateDepthCurvatureEffect();
         UpdateLevelUnits();
         SpawnLevelUnitsAsNeeded();
+    }
+
+    void UpdateDepthCurvatureEffect()
+    {
+        Shader.SetGlobalFloat("DepthCurvatureCurve", HelperUtilities.Remap(curve, -1, 1, -maxCurve, maxCurve));
+        Shader.SetGlobalFloat("DepthCurvatureMinDepth", minDepthForCurvature);
     }
 
     void UpdateLevelUnits()

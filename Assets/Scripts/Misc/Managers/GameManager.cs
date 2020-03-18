@@ -10,6 +10,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         if (Instance == this)
         {
+            transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
         }
     }

@@ -8,7 +8,6 @@ public class FlightInput
 {
     public float horizontal;
     public float vertical;
-    public FlightShape? shapeShiftTo;
 }
 
 public class FlightController : MonoBehaviour
@@ -22,9 +21,17 @@ public class FlightController : MonoBehaviour
     public float flightLookAcceleration = 5f;
     [Range(0, 0.5f)] public float flightCameraBoundaryOffset = 0.1f;
 
+    [Header("Shape Shifting")]
+    public Material squareMaterial;
+    public Material triangleMaterial;
+    public Material circleMaterial;
+    public Material starMaterial;
+
     [ReadOnly] public FlightInput flightInput = new FlightInput();
 
     [SerializeField] [ReadOnly] private Vector3 curVelocity;
+
+    public FlightShape curFlightShape { get; private set; } = FlightShape.Circle;
 
     private FlightModel flightModel;
     private Rigidbody rigidbody => flightModel.rigidbody;
@@ -37,6 +44,7 @@ public class FlightController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateShape();
     }
 
     // Update is called once per frame
@@ -93,5 +101,36 @@ public class FlightController : MonoBehaviour
                 targetViewportPos.z);
 
         return camera.ViewportToWorldPoint(adjustedViewportPos);
+    }
+
+    public void ShapeShiftTo(FlightShape shape)
+    {
+        curFlightShape = shape;
+        UpdateShape();
+    }
+
+    void UpdateShape()
+    {
+        var selectedMaterial = squareMaterial;
+        switch (curFlightShape)
+        {
+            case FlightShape.Square:
+                selectedMaterial = squareMaterial;
+                break;
+            case FlightShape.Triangle:
+                selectedMaterial = triangleMaterial;
+                break;
+            case FlightShape.Circle:
+                selectedMaterial = circleMaterial;
+                break;
+            case FlightShape.Star:
+                selectedMaterial = starMaterial;
+                break;
+        }
+
+        foreach (var renderer in GetComponentsInChildren<MeshRenderer>())
+        {
+            renderer.material = selectedMaterial;
+        }
     }
 }

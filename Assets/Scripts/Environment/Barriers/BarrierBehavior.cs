@@ -5,13 +5,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[ExecuteInEditMode]
 public class BarrierBehavior : MonoBehaviour
 {
     public Transform holeTransform;
     
     public float holeOffset;
     public float acccuracyOffset;
+    public FlightShape flightShape;
+    public bool autoGenerateBarrierOnEnable = false;
 
     public BoxCollider barrierCollider;
 
@@ -22,8 +23,6 @@ public class BarrierBehavior : MonoBehaviour
     [SerializeField]
     [Button("Get Hole Position", "InitializeBarrier")]
     private bool _btnHolePosition;
-
-    public FlightShape flightShape;
 
     private float[] transformPlacementCoords;
 
@@ -37,6 +36,15 @@ public class BarrierBehavior : MonoBehaviour
         debugChangeTransformColor();
     }
 
+    void OnEnable()
+    {
+        if (autoGenerateBarrierOnEnable)
+        {
+            InitializeBarrier();
+            debugChangeTransformColor();
+        }
+    }
+
     private void InitializeBarrier()
     {
         float x, y;
@@ -44,7 +52,7 @@ public class BarrierBehavior : MonoBehaviour
         y = barrierCollider.size.y / 2;
 
         holeTransform.localPosition = new Vector3(Random.Range(-x + holeOffset, x - holeOffset), Random.Range(-y + holeOffset, y - holeOffset), 0);
-
+            
         string[] ListOfFlightShapes = Enum.GetNames(typeof(FlightShape));
         flightShape = (FlightShape)(Random.Range(0, ListOfFlightShapes.Length));
     }

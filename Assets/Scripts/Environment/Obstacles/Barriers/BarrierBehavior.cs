@@ -45,6 +45,14 @@ public class BarrierBehavior : MonoBehaviour
         }
     }
 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+
+        Gizmos.DrawWireSphere(holeTransform.position, acccuracyOffset);
+
+    }
+
     private void InitializeBarrier()
     {
         float x, y;

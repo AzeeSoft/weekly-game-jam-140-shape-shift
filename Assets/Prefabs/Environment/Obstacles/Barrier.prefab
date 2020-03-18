@@ -110,14 +110,15 @@ MonoBehaviour:
   holeTransform: {fileID: 5061976347773592989}
   holeOffset: 0.1
   acccuracyOffset: 0
+  flightShape: 0
+  autoGenerateBarrierOnEnable: 0
   barrierCollider: {fileID: 5061976347179310124}
   possibleMaterials:
   - {fileID: 2100000, guid: a2abf5de2d5c20f479556d6ea43c4f45, type: 2}
+  - {fileID: 2100000, guid: 5e26aa7ba464c944b8d4be8469a68b80, type: 2}
   - {fileID: 2100000, guid: 01d6e653ba61d3846afc96e999c55e6f, type: 2}
   - {fileID: 2100000, guid: 19e72801acd69ee4abc29079411503bc, type: 2}
-  - {fileID: 2100000, guid: 5e26aa7ba464c944b8d4be8469a68b80, type: 2}
   _btnHolePosition: 0
-  flightShape: 0
 --- !u!1 &5061976347773592988
 GameObject:
   m_ObjectHideFlags: 0

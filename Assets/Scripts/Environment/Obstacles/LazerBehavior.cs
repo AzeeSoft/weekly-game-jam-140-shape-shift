@@ -32,7 +32,7 @@ public class LazerBehavior : MonoBehaviour
 
         if (otherFM != null)
         {
-            print("Ouch! Missed the Hole / Wrong shape!");
+            print("Hit Lazer!");
         }
     }
 }

@@ -14,11 +14,13 @@ public class FlightModel : MonoBehaviour
 {
     public FlightShape curFlightShape { get; private set; } = FlightShape.Circle;
 
+    public Rigidbody rigidbody { get; private set; }
     public FlightController flightController { get; private set; }
     public FlightPlayerInput flightPlayerInput { get; private set; }
 
     void Awake()
     {
+        rigidbody = GetComponent<Rigidbody>();
         flightController = GetComponent<FlightController>();
         flightPlayerInput = GetComponent<FlightPlayerInput>();
     }

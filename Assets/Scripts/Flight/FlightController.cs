@@ -26,15 +26,28 @@ public class FlightController : MonoBehaviour
 
     [SerializeField] [ReadOnly] private Vector3 curVelocity;
 
+    private FlightModel flightModel;
+    private Rigidbody rigidbody => flightModel.rigidbody;
+
+    void Awake()
+    {
+        flightModel = GetComponent<FlightModel>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
+    }
+
+    void LateUpdate()
+    {
+        ConfineWithinCameraBounds();
     }
 
     void Move()
@@ -46,18 +59,28 @@ public class FlightController : MonoBehaviour
         var curAcceleration =
             (targetVelocity.magnitude > curVelocity.magnitude) ? flightAcceleration : flightDeceleration;
 
-        curVelocity = Vector3.Lerp(curVelocity, targetVelocity, Time.deltaTime * curAcceleration);
+        curVelocity = Vector3.Lerp(curVelocity, targetVelocity, Time.fixedDeltaTime * curAcceleration);
 
-        var targetPos = transform.position + curVelocity;
+        rigidbody.velocity = curVelocity;
+
+        /* var targetPos = transform.position + curVelocity;
         targetPos = GetViewportBoundedPosition(targetPos);
 
         // transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * flightLerpFactor);
-        transform.position = targetPos;
+        transform.position = targetPos;*/
 
         var rotationAngles = new Vector3(-moveDir.y, moveDir.x, 0);
         var targetRot = Quaternion.Euler(rotationAngles * flightLookStrength);
         avatar.transform.rotation =
-            Quaternion.Slerp(avatar.transform.rotation, targetRot, Time.deltaTime * flightLookAcceleration);
+            Quaternion.Slerp(avatar.transform.rotation, targetRot, Time.fixedDeltaTime * flightLookAcceleration);
+    }
+
+    void ConfineWithinCameraBounds()
+    {
+        var targetPos = GetViewportBoundedPosition(transform.position);
+
+        // transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * flightLerpFactor);
+        transform.position = targetPos;
     }
 
     Vector3 GetViewportBoundedPosition(Vector3 targetPos)

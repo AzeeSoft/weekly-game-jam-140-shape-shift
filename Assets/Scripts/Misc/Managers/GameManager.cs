@@ -15,6 +15,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         public int highscore;
         public string highscorePlayerName;
+        public PlayerSettings playerSettings;
     }
 
     public string saveFile;

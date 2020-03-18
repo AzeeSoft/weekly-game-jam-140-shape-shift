@@ -49,6 +49,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
     void UpdateLevelUnits()
     {
         var moveDelta = -transform.forward * speed * Time.deltaTime;
+
         HashSet<ProceduralLevelUnit> levelUnitsToRemove = new HashSet<ProceduralLevelUnit>();
 
         foreach (var proceduralLevelUnit in proceduralLevelUnits)

@@ -69,7 +69,7 @@ public class FlightController : MonoBehaviour
         // transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * flightLerpFactor);
         transform.position = targetPos;*/
 
-        var rotationAngles = new Vector3(-moveDir.y, moveDir.x, 0);
+        var rotationAngles = new Vector3(-moveDir.y, 0, -moveDir.x);
         var targetRot = Quaternion.Euler(rotationAngles * flightLookStrength);
         avatar.transform.rotation =
             Quaternion.Slerp(avatar.transform.rotation, targetRot, Time.fixedDeltaTime * flightLookAcceleration);

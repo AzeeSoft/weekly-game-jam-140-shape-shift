@@ -416,3 +416,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91211b751e3daec4e8d19dc6e8e6e768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachineBrain: {fileID: 3559951522812067564}

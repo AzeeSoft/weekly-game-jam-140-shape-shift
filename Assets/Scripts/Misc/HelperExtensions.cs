@@ -264,6 +264,21 @@ public static class HelperExtensions
         };
     }
 
+    public static bool CanSeePoint(Camera camera, Vector3 point, bool ignoreClippingPlanes = true)
+    {
+        Vector3 viewportPoint = camera.WorldToViewportPoint(point);
+
+        if (!ignoreClippingPlanes)
+        {
+            if (viewportPoint.z < camera.nearClipPlane || viewportPoint.z > camera.farClipPlane)
+            {
+                return false;
+            }
+        }
+
+        return (viewportPoint.z > 0 && (new Rect(0, 0, 1, 1)).Contains(viewportPoint));
+    }
+
     #endregion
 
     #region CinemachinePOV

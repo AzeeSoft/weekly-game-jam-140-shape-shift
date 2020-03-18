@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[ExecuteInEditMode]
 public class BarrierBehavior : MonoBehaviour
 {
     public Transform holeTransform;

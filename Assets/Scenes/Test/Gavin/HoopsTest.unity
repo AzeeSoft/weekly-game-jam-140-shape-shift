@@ -298,15 +298,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holeTransform: {fileID: 874134495}
-  holeOffset: 3
+  holeOffset: 0.1
   acccuracyOffset: 0
+  barrierCollider: {fileID: 292422254}
   possibleMaterials:
   - {fileID: 2100000, guid: a2abf5de2d5c20f479556d6ea43c4f45, type: 2}
   - {fileID: 2100000, guid: 01d6e653ba61d3846afc96e999c55e6f, type: 2}
   - {fileID: 2100000, guid: 19e72801acd69ee4abc29079411503bc, type: 2}
   - {fileID: 2100000, guid: 5e26aa7ba464c944b8d4be8469a68b80, type: 2}
   _btnHolePosition: 0
-  flightShape: 0
+  flightShape: 1
 --- !u!1 &874134494
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874134494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.010240975, y: 0.016004073, z: -1.6763687}
+  m_LocalPosition: {x: -0.15334538, y: 0.18782663, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 292422257}
@@ -365,7 +366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 01d6e653ba61d3846afc96e999c55e6f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

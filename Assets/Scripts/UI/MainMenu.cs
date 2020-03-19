@@ -23,6 +23,8 @@ public class MainMenu : MonoBehaviour
 
         textColorSequence = DOTween.Sequence();
         textColorSequence.Append(highscoreTextMesh.DOColor(textColor2, colorChangeSpeed)).Append(highscoreTextMesh.DOColor(textColor1, colorChangeSpeed)).SetLoops(-1);
+
+        Time.timeScale = 1;
     }
 
     public void loadNextScene()

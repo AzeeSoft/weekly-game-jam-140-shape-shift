@@ -90,6 +90,8 @@ public class BarrierBehavior : MonoBehaviour
                 print("Ouch! Missed the Hole / Wrong shape!");
                 otherFM.health.TakeDamage(damage);
             }
+
+            otherFM.PassedThroughBarrier(this);
         }
     }
 }

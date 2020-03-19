@@ -36,4 +36,9 @@ public class FlightModel : MonoBehaviour
     void Update()
     {
     }
+
+    public void PassedThroughBarrier(BarrierBehavior barrierBehavior)
+    {
+        LevelManager.Instance.proceduralLevelGenerator.SwitchCurvetarget();
+    }
 }

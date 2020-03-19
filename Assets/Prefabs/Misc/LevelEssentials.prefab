@@ -297,6 +297,11 @@ PrefabInstance:
       propertyPath: flightModel
       value: 
       objectReference: {fileID: 1047333535581566219}
+    - target: {fileID: 3207469462906881512, guid: 2449900d1732d854cadcdef421d22deb,
+        type: 3}
+      propertyPath: proceduralLevelGenerator
+      value: 
+      objectReference: {fileID: 7243689210168507094}
     - target: {fileID: 3207469462906881514, guid: 2449900d1732d854cadcdef421d22deb,
         type: 3}
       propertyPath: m_Name
@@ -654,6 +659,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4994367996816935965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7243689210168507094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2434564821576201931, guid: 48ce4c21173e8494d8546228dd98d2e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4994367996816935965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23018b58397b42643a67820a82485039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5692771939655734036
 PrefabInstance:
   m_ObjectHideFlags: 0

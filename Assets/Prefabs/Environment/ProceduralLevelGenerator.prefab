@@ -86,6 +86,13 @@ MonoBehaviour:
   curve: 1
   maxCurve: 220
   minDepthForCurvature: 0.72
+  curveSpeedRange:
+    min: 1
+    max: 1
+  autoSwitchCurveTarget: 0
+  curveTargetDurationRange:
+    min: 4
+    max: 4
 --- !u!1 &2434564821661916338
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
     public float maxCurve = 0;
     [Range(0, 1)] public float minDepthForCurvature = 0;
     public Range curveSpeedRange;
+    public bool autoSwitchCurveTarget = false;
     public Range curveTargetDurationRange;
 
     private float curveSource = 0;
@@ -64,19 +65,24 @@ public class ProceduralLevelGenerator : MonoBehaviour
     {
         timeSinceCurveTargetSet += Time.deltaTime;
 
-        if (timeSinceCurveTargetSet >= curCurveTargetDuration)
+        if (autoSwitchCurveTarget && timeSinceCurveTargetSet >= curCurveTargetDuration)
         {
-            curveTarget = Random.Range(-1f, 1f);
-            curCurveSpeed = curveSpeedRange.GetRandomInRange();
-            curCurveTargetDuration = curveTargetDurationRange.GetRandomInRange();
-            timeSinceCurveTargetSet = 0;
-            curveSource = curve;
+            SwitchCurvetarget();
         }
 
         curve = Mathf.Lerp(curve, curveTarget, Time.deltaTime * curCurveSpeed);
 
         Shader.SetGlobalFloat("DepthCurvatureCurve", HelperUtilities.Remap(curve, -1, 1, -maxCurve, maxCurve));
         Shader.SetGlobalFloat("DepthCurvatureMinDepth", minDepthForCurvature);
+    }
+
+    public void SwitchCurvetarget()
+    {
+        curveTarget = Random.Range(-1f, 1f);
+        curCurveSpeed = curveSpeedRange.GetRandomInRange();
+        curCurveTargetDuration = curveTargetDurationRange.GetRandomInRange();
+        timeSinceCurveTargetSet = 0;
+        curveSource = curve;
     }
 
     void UpdateLevelUnits()

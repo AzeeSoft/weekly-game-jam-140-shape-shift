@@ -1535,11 +1535,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1377169527415334993, guid: c9205b8d6685f914a8ef3d95a8c0a07e,
         type: 3}
-      propertyPath: m_textAlignment
-      value: 258
-      objectReference: {fileID: 0}
-    - target: {fileID: 1377169527415334993, guid: c9205b8d6685f914a8ef3d95a8c0a07e,
-        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: d097656d84a701c48b94c82922783eaa,

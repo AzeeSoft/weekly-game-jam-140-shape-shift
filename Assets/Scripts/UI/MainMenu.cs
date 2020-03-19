@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
 
     public void loadNextScene()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(sceneToLoad); });
     }
 
     public void quitGame()

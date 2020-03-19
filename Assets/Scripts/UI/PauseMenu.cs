@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(mainMenuName);
+        ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(mainMenuName); });
     }
 
     void OnPause(InputValue inputValue)

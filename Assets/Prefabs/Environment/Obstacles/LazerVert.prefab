@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3484800892595756305}
   - component: {fileID: 3484800892595756309}
   m_Layer: 0
-  m_Name: Lazer
+  m_Name: LazerVert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165bc1a8aa5654e4bb4c82217af4d884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yOffset: 10
+  offset: 0
   movementSpeed: 1
   damage: 10
+  isHorizontal: 0

@@ -9,21 +9,13 @@ public class ControlsMenu : MonoBehaviour
 
     void OnEnable()
     {
-        invertY.isOn = GameManager.Instance.gameData.playerSettings.shouldInvertY;
+        invertY.isOn = GameManager.Instance.GetGameData().playerSettings.shouldInvertY;
     }
 
     public void UpdateInvertY()
     {
-        GameManager.Instance.gameData.playerSettings.shouldInvertY = !invertY.isOn;
-        
-        if (!invertY.isOn)
-        {
-            print("false");
-        }
-        else
-        {
-            print("true");
-        }
-        SaveSystem.SaveData<GameManager.GameData>(GameManager.Instance.gameData, GameManager.Instance.saveFile);
+        GameManager.Instance.gameData.playerSettings.shouldInvertY = invertY.isOn;
+
+        GameManager.Instance.SaveGameData();
     }
 }

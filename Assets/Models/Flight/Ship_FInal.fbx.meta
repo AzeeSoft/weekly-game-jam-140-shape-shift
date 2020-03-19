@@ -3,7 +3,41 @@ guid: 26457fb7d50cf9040883d877db6f88f0
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine_1_Mat
+    second: {fileID: 3796742557001622717, guid: 26457fb7d50cf9040883d877db6f88f0,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine_2_Mat
+    second: {fileID: 2581070879457790520, guid: 26457fb7d50cf9040883d877db6f88f0,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine_3_Mat
+    second: {fileID: -7808749091812797304, guid: 26457fb7d50cf9040883d877db6f88f0,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine_4_Mat
+    second: {fileID: -871154320284115570, guid: 26457fb7d50cf9040883d877db6f88f0,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SHip_Mat
+    second: {fileID: 2100000, guid: f7ab23179422ad2418696b692d4cbebb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 6ea40442dd82e0d44bb987c17bfff296, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

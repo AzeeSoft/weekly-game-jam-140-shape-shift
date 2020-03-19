@@ -2863,7 +2863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af006f9ad94c7d34494430f1675d1eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: GameTest
+  sceneToLoad: Main
   mainMenuTextMesh: {fileID: 1912521554}
   highscoreTextMesh: {fileID: 977302089}
   dummyText: {fileID: 1678614247}

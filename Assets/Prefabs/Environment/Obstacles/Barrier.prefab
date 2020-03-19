@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5061976347179310127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 18.2}
-  m_LocalScale: {x: 52.08, y: 20.58, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_Children:
   - {fileID: 5061976347773592989}
   m_Father: {fileID: 0}
@@ -112,6 +112,8 @@ MonoBehaviour:
   acccuracyOffset: 0
   flightShape: 0
   autoGenerateBarrierOnEnable: 0
+  damage: 20
+  refill: 10
   barrierCollider: {fileID: 5061976347179310124}
   possibleMaterials:
   - {fileID: 2100000, guid: a2abf5de2d5c20f479556d6ea43c4f45, type: 2}
@@ -145,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5061976347773592988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3902547, y: -0.36636743, z: 0}
+  m_LocalPosition: {x: 0.36, y: -0.362, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5061976347179310131}

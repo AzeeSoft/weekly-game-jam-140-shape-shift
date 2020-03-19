@@ -77,7 +77,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startOffset: 120
   endOffset: 1000
-  speed: 50
+  speedRange:
+    min: 0
+    max: 0
+  additiveSpeedFactor: 0
   levelUnitsHolder: {fileID: 2434564819778078036}
   proceduralLevelUnitPrefabs:
   - {fileID: 3665209067700127612, guid: 5e62b7eb0aa39b6478a6b8df5d57bfb4, type: 3}
@@ -91,8 +94,8 @@ MonoBehaviour:
     max: 1
   autoSwitchCurveTarget: 0
   curveTargetDurationRange:
-    min: 4
-    max: 4
+    min: 5
+    max: 10
 --- !u!1 &2434564821661916338
 GameObject:
   m_ObjectHideFlags: 0

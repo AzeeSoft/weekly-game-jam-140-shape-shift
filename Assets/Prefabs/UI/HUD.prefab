@@ -122,9 +122,8 @@ MonoBehaviour:
   healthText: {fileID: 3244565185467598451}
   highscoreText: {fileID: 1867780953926045257}
   scoreText: {fileID: 7869273143770759786}
-  damageIndicatorImage: {fileID: 0}
-  damageIndicatorMaxOpacity: 0.7
-  damageIndicatorAnimationDuration: 0.3
+  scoreMultiplierText: {fileID: 6280531698971379860}
+  prevHighScore: 0
 --- !u!1 &2194157259594308900
 GameObject:
   m_ObjectHideFlags: 0

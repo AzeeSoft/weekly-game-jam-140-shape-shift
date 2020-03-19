@@ -11,6 +11,7 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI highscoreText;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreMultiplierText;
 
     public float prevHighScore = 0;
 
@@ -34,5 +35,6 @@ public class HUD : MonoBehaviour
         healthText.text = $"{LevelManager.Instance.flightModel.health.currentHealth:##0}";
         highscoreText.text = $"Highscore: {Mathf.Max(LevelManager.Instance.score, prevHighScore):###,###,##0}";
         scoreText.text = $"Score: {LevelManager.Instance.score:###,###,##0}";
+        scoreMultiplierText.text = $"x{LevelManager.Instance.scoreMultiplier:##0}";
     }
 }

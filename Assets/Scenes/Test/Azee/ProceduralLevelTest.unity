@@ -356,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 1047333535581566219, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: switchCurveTargetOnBarrierTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1047333536445294561, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -542,7 +542,7 @@ PrefabInstance:
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -552,17 +552,17 @@ PrefabInstance:
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6705240986417892810, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -619,18 +619,13 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
-      propertyPath: autoSwitchCurveTarget
-      value: 1
+      propertyPath: speedRange.min
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
-      propertyPath: curveTargetDurationRange.min
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: curveTargetDurationRange.max
-      value: 15
+      propertyPath: speedRange.max
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1047333535061718884, guid: 63a887c086cc5ff48ac72d92817b181a, type: 3}

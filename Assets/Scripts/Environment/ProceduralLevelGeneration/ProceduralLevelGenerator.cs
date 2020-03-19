@@ -10,19 +10,23 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     public float startOffset = 10f;
     public float endOffset = 500f;
-    public float speed = 5f;
+    public Range speedRange;
+    [Range(0, 1)] public float additiveSpeedFactor;
 
     public Transform levelUnitsHolder;
 
     public List<GameObject> proceduralLevelUnitPrefabs;
 
-    [Header("Depth Curvature Settings")]
-    [Range(-1, 1)] public float curve = 0;
+    [Header("Depth Curvature Settings")] [Range(-1, 1)]
+    public float curve = 0;
+
     public float maxCurve = 0;
     [Range(0, 1)] public float minDepthForCurvature = 0;
     public Range curveSpeedRange;
     public bool autoSwitchCurveTarget = false;
     public Range curveTargetDurationRange;
+
+    public float curSpeed => HelperUtilities.Remap(additiveSpeedFactor, 0, 1, speedRange.min, speedRange.max);
 
     private float curveSource = 0;
     private float curveTarget = 0;
@@ -90,7 +94,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     void UpdateLevelUnits()
     {
-        var moveDelta = -transform.forward * speed * Time.deltaTime;
+        var moveDelta = -transform.forward * curSpeed * Time.deltaTime;
 
         HashSet<ProceduralLevelUnit> levelUnitsToRemove = new HashSet<ProceduralLevelUnit>();
 

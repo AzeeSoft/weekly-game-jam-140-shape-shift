@@ -24252,7 +24252,12 @@ PrefabInstance:
     - target: {fileID: 5061976347179310128, guid: b532b2877f851c844acbada0b17b7752,
         type: 3}
       propertyPath: acccuracyOffset
-      value: 2.1
+      value: 4.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061976347179310128, guid: b532b2877f851c844acbada0b17b7752,
+        type: 3}
+      propertyPath: holeOffset
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5061976347179310131, guid: b532b2877f851c844acbada0b17b7752,
         type: 3}

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public class FlightModel : MonoBehaviour
     public FlightController flightController { get; private set; }
     public FlightPlayerInput flightPlayerInput { get; private set; }
 
+    public event Action<BarrierBehavior, bool> onPassedThroughBarrier;
+
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -39,11 +42,13 @@ public class FlightModel : MonoBehaviour
     {
     }
 
-    public void PassedThroughBarrier(BarrierBehavior barrierBehavior)
+    public void PassedThroughBarrier(BarrierBehavior barrierBehavior, bool success)
     {
         if (switchCurveTargetOnBarrierTrigger)
         {
             LevelManager.Instance.proceduralLevelGenerator.CheckAndSwitchCurvetarget();
         }
+
+        onPassedThroughBarrier?.Invoke(barrierBehavior, success);
     }
 }

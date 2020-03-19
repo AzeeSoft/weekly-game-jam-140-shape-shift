@@ -80,18 +80,24 @@ public class BarrierBehavior : MonoBehaviour
 
         if (otherFM != null)
         {
-            if (Vector3.Distance(holeTransform.position, other.gameObject.transform.position) <= acccuracyOffset && otherFM.curFlightShape == flightShape)
+            var adjustedFlightPos = otherFM.transform.position;
+            // adjustedFlightPos.z = holeTransform.position.z;
+
+            if (Vector3.Distance(holeTransform.position, adjustedFlightPos) <= acccuracyOffset && otherFM.curFlightShape == flightShape)
             {
                 print("Succesfully passed through barrier!");
                 otherFM.health.UpdateHealth(refill);
+                otherFM.PassedThroughBarrier(this, true);
             }
             else
             {
                 print("Ouch! Missed the Hole / Wrong shape!");
+                print("Dist: " + Vector3.Distance(holeTransform.position, adjustedFlightPos));
+                print("Flight Shape: " + otherFM.curFlightShape);
+                print("Hole Shape: " + flightShape);
                 otherFM.health.TakeDamage(damage);
+                otherFM.PassedThroughBarrier(this, false);
             }
-
-            otherFM.PassedThroughBarrier(this);
         }
     }
 }

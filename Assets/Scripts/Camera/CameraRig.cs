@@ -18,4 +18,20 @@ public class CameraRig : SingletonMonoBehaviour<CameraRig>
     {
         
     }
+
+    public void ShakeCamera(CameraShakeProps cameraShakeProps)
+    {
+        var vCam = cinemachineBrain.ActiveVirtualCamera as CinemachineVirtualCamera;
+
+        var noiseSettings = vCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+        noiseSettings.m_AmplitudeGain = cameraShakeProps.camShakeStrength;
+        noiseSettings.m_FrequencyGain = cameraShakeProps.camShakeVibrato;
+
+        this.WaitAndExecute(() =>
+        {
+            noiseSettings.m_AmplitudeGain = 0;
+            noiseSettings.m_FrequencyGain = 0;
+        }, cameraShakeProps.camShakeDuration);
+    }
 }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum FlightShape
 {
@@ -14,6 +16,9 @@ public enum FlightShape
 public class FlightModel : MonoBehaviour
 {
     public bool switchCurveTargetOnBarrierTrigger = true;
+    public PostProcessVolume damageEffect;
+    public float damageEffectTransitionDuration = 0.3f;
+    public CameraShakeProps damageCameraShakeProps;
 
     public FlightShape curFlightShape => flightController.curFlightShape;
 
@@ -35,6 +40,14 @@ public class FlightModel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health.OnDamageTaken.AddListener(() =>
+        {
+            damageEffect.DOKill(true);
+            damageEffect.DOWeight(1f, damageEffectTransitionDuration)
+                .OnComplete(() => { damageEffect.DOWeight(0f, damageEffectTransitionDuration).Play(); }).Play();
+
+            CameraRig.Instance.ShakeCamera(damageCameraShakeProps);
+        });
     }
 
     // Update is called once per frame

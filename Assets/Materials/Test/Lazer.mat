@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestTriangleHole
+  m_Name: Lazer
   m_Shader: {fileID: 4800000, guid: 88c351dfb5c91f0448575ee3faeb8f4c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
@@ -85,7 +85,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissiveValue: 0.1
+    - _EmissiveValue: 0.158
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossinessMultiply: 0.8
@@ -102,5 +102,5 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.90698564, g: 1, b: 0, a: 1}
-    - _EmissionColor: {r: 3.670546, g: 3.8743455, b: 0, a: 1}
+    - _Color: {r: 0.82610524, g: 1, b: 0, a: 1}
+    - _EmissionColor: {r: 102.75575, g: 95.223915, b: 0, a: 1}

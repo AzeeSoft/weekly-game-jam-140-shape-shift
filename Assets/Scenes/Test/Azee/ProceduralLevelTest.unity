@@ -353,11 +353,6 @@ PrefabInstance:
       propertyPath: m_FollowOffset.y
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1047333535581566219, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: switchCurveTargetOnBarrierTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1047333536445294561, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -587,6 +582,11 @@ PrefabInstance:
     - target: {fileID: 6705240986417892810, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091274081194946321, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: weight
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7243689210168507093, guid: 63a887c086cc5ff48ac72d92817b181a,

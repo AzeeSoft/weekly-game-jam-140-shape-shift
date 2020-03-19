@@ -6,6 +6,7 @@ using Cinemachine.Utility;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -305,6 +306,16 @@ public static class HelperExtensions
         Vector3 right = Vector3.Cross(up, fwd);
         if (!right.AlmostZero())
             self.m_VerticalAxis.Value = Vector3.SignedAngle(fwd, targetFwd, right);
+    }
+
+    #endregion
+
+
+    #region PostProcessVolume
+
+    public static Tween DOWeight(this PostProcessVolume self, float endValue, float duration)
+    {
+        return DOTween.To(() => self.weight, value => self.weight = value, endValue, duration).SetTarget(self);
     }
 
     #endregion

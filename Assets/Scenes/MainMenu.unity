@@ -2745,10 +2745,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1678614246}
   - component: {fileID: 1678614248}
-  - component: {fileID: 1678614247}
   - component: {fileID: 1678614249}
   - component: {fileID: 1678614250}
   - component: {fileID: 1678614251}
+  - component: {fileID: 1678614247}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -2789,27 +2789,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678614245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!222 &1678614248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2860,7 +2864,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: GameTest
+  mainMenuTextMesh: {fileID: 1912521554}
   highscoreTextMesh: {fileID: 977302089}
+  dummyText: {fileID: 1678614247}
+  textChangeSpeed: 7
   colorChangeSpeed: 1
   textColor1: {r: 0.9294118, g: 0.1137255, b: 0.003921569, a: 1}
   textColor2: {r: 1, g: 0.45882356, b: 0.38431376, a: 1}
@@ -3120,7 +3127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Astral Angles
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d097656d84a701c48b94c82922783eaa, type: 2}
   m_sharedMaterial: {fileID: 7353342199940750249, guid: d097656d84a701c48b94c82922783eaa,
@@ -3190,13 +3197,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1912521554}
-    characterCount: 13
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using BasicTools.ButtonInspector;
 using UnityEngine;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
@@ -15,11 +16,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         public int highscore;
         public string highscorePlayerName;
-        public PlayerSettings playerSettings;
+        public PlayerSettings playerSettings = new PlayerSettings();
     }
 
     public GameData gameData { get; private set; }
     public string saveFile;
+
+    [SerializeField] [Button("Reset Game Data", "ResetGameData")]
+    private bool _btnResetGameData;
 
     new void Awake()
     {
@@ -39,13 +43,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         
         if (gameData == null)
         {
-            gameData = new GameData
-            {
-                highscore = 100,
-                highscorePlayerName = "G.A.T.S"
-            };
-
-            SaveGameData();
+            ResetGameData();
         }
     }
 
@@ -75,5 +73,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public GameData GetGameData()
     {
         return gameData;
+    }
+
+    public void ResetGameData()
+    {
+        gameData = new GameData
+        {
+            highscore = 100,
+            highscorePlayerName = "G.A.T.S"
+        };
+
+        SaveGameData();
     }
 }

@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2434564821576201929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -9.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2434564819778078036}
@@ -78,14 +78,14 @@ MonoBehaviour:
   startOffset: 120
   endOffset: 1000
   speedRange:
-    min: 0
-    max: 0
+    min: 50
+    max: 100
   additiveSpeedFactor: 0
   levelUnitsHolder: {fileID: 2434564819778078036}
   proceduralLevelUnitPrefabs:
-  - {fileID: 3665209067700127612, guid: 5e62b7eb0aa39b6478a6b8df5d57bfb4, type: 3}
-  - {fileID: 3665209067700127612, guid: e2b7d6bdef2892a49bc89283b4930a94, type: 3}
-  - {fileID: 3665209067700127612, guid: 0728f7925be10a541a35ae586e8eb7f1, type: 3}
+  - {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc, type: 3}
+  - {fileID: 2546695485445567943, guid: 647e4c7df9cb3804c947cfd2cbf6174b, type: 3}
+  - {fileID: 2546695485445567943, guid: c0d95a96243985949b520a12785dbd20, type: 3}
   curve: 1
   maxCurve: 220
   minDepthForCurvature: 0.72

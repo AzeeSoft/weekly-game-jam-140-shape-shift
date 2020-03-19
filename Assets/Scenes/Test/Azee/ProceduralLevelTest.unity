@@ -571,43 +571,5 @@ PrefabInstance:
       propertyPath: weight
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7243689210168507093, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: proceduralLevelUnitPrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: proceduralLevelUnitPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
-        type: 3}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: proceduralLevelUnitPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 2546695485445567943, guid: 647e4c7df9cb3804c947cfd2cbf6174b,
-        type: 3}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: proceduralLevelUnitPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 2546695485445567943, guid: c0d95a96243985949b520a12785dbd20,
-        type: 3}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: speedRange.min
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: speedRange.max
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a887c086cc5ff48ac72d92817b181a, type: 3}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BasicTools.ButtonInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -21,6 +22,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public GameData gameData { get; private set; }
     public string saveFile;
+    public string mainMenuScene = "MainMenu";
 
     [SerializeField] [Button("Reset Game Data", "ResetGameData")]
     private bool _btnResetGameData;
@@ -40,7 +42,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     void Start()
     {
         gameData = SaveSystem.LoadData<GameData>(saveFile);
-        
+
         if (gameData == null)
         {
             ResetGameData();
@@ -50,7 +52,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void CheckAndSetHighScore(int currentScore, string currentPlayerName)
@@ -84,5 +85,18 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         };
 
         SaveGameData();
+    }
+
+    public void GoToMainMenu()
+    {
+        ScreenFader.Instance.FadeOut(-1, () =>
+        {
+            SceneManager.LoadScene(mainMenuScene);
+        });
+    }
+
+    public void RestartCurrentScene()
+    {
+        ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(SceneManager.GetActiveScene().name); });
     }
 }

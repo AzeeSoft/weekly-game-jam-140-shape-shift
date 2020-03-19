@@ -27,6 +27,14 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     public FlightModel flightModel;
     public ProceduralLevelGenerator proceduralLevelGenerator;
 
+    new void Awake()
+    {
+        base.Awake();
+
+        Time.timeScale = 1f;
+        HelperUtilities.UpdateCursorLock(true);
+    }
+
     void Start()
     {
         flightModel.onPassedThroughBarrier += (barrier, success) =>

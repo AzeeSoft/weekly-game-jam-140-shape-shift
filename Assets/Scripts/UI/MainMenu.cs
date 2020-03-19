@@ -48,6 +48,11 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    void OnDisable()
+    {
+        mainMenuTextMesh.text = "Astral Angles";
+    }
+
     public void loadNextScene()
     {
         ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(sceneToLoad); });

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestHoop
+  m_Name: Barrier
   m_Shader: {fileID: 4800000, guid: 4d3d3f2b960148d4e91bedc7809b51b8, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 0
@@ -88,7 +88,7 @@ Material:
     - _EmissiveValue: 0.073
     - _GlossMapScale: 1
     - _Glossiness: 0.5
-    - _GlossinessMultiply: 0.8
+    - _GlossinessMultiply: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _MetallicMultiply: 0
@@ -104,5 +104,5 @@ Material:
     - _ZWrite: 0
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.15690297, b: 0, a: 0.3529412}
-    - _EmissionColor: {r: 17.148375, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.7735849, g: 0.122641504, b: 0, a: 0.11372549}
+    - _EmissionColor: {r: 6.8495603, g: 0, b: 0, a: 1}

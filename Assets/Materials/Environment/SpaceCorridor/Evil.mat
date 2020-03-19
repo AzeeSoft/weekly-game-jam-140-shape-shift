@@ -10,7 +10,7 @@ Material:
   m_Name: Evil
   m_Shader: {fileID: 4800000, guid: 88c351dfb5c91f0448575ee3faeb8f4c, type: 3}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -103,4 +103,4 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 0.8000001, g: 0.0012880715, b: 0, a: 1}
-    - _EmissionColor: {r: 3.2111173, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 23.968628, g: 0, b: 0, a: 1}

@@ -10,7 +10,7 @@ Material:
   m_Name: CorridorLight
   m_Shader: {fileID: 4800000, guid: 88c351dfb5c91f0448575ee3faeb8f4c, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -88,7 +88,7 @@ Material:
     - _EmissiveValue: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.321
-    - _GlossinessMultiply: 0.8
+    - _GlossinessMultiply: 0
     - _GlossyReflections: 1
     - _Metallic: 1
     - _MetallicMultiply: 0

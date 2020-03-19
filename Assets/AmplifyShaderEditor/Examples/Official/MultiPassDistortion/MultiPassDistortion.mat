@@ -26,9 +26,9 @@ Material:
     m_Floats:
     - _DepthFadeDistance: 0.4
     - _DistortionAmount: 0.01662117
-    - _FresnelPower: 2.32
+    - _FresnelPower: 0.74
     - _FresnelScale: 1.99
-    - _TimeScale: 0.2
+    - _TimeScale: 0.8
     m_Colors:
-    - _ForcefieldTint: {r: 0.6040851, g: 0.63637674, b: 0.7075472, a: 1}
-    - _IntersectionColor: {r: 0.48584908, g: 1, b: 0.955263, a: 0}
+    - _ForcefieldTint: {r: 0.6320754, g: 0.09893355, b: 0, a: 1}
+    - _IntersectionColor: {r: 1, g: 0.53386307, b: 0, a: 1}

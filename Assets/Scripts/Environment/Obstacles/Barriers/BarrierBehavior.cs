@@ -18,9 +18,11 @@ public class BarrierBehavior : MonoBehaviour
 
     public BoxCollider barrierCollider;
 
-    [Header("Debug")]
+    public GameObject[] holePrefabs;
 
-    public Material[] possibleMaterials;
+    /*[Header("Debug")]
+
+    public Material[] possibleMaterials;*/
 
     [SerializeField]
     [Button("Get Hole Position", "InitializeBarrier")]
@@ -35,7 +37,7 @@ public class BarrierBehavior : MonoBehaviour
         transformPlacementCoords = new float[] {barrierCollider.bounds.min.x, barrierCollider.bounds.max.x, barrierCollider.bounds.min.y, barrierCollider.bounds.max.y, barrierCollider.bounds.min.z, barrierCollider.bounds.max.z};
 
         InitializeBarrier();
-        debugChangeTransformColor();
+        UpdateHole();
     }
 
     void OnEnable()
@@ -43,7 +45,7 @@ public class BarrierBehavior : MonoBehaviour
         if (autoGenerateBarrierOnEnable)
         {
             InitializeBarrier();
-            debugChangeTransformColor();
+            UpdateHole();
         }
     }
 
@@ -67,11 +69,16 @@ public class BarrierBehavior : MonoBehaviour
         flightShape = (FlightShape)(Random.Range(0, ListOfFlightShapes.Length));
     }
 
-    private void debugChangeTransformColor()
+    private void UpdateHole()
     {
-        Material currentMaterial = possibleMaterials[(int)flightShape % possibleMaterials.Length];
+        /*Material currentMaterial = possibleMaterials[(int)flightShape % possibleMaterials.Length];
+        holeTransform.gameObject.GetComponent<MeshRenderer>().material = currentMaterial;*/
 
-        holeTransform.gameObject.GetComponent<MeshRenderer>().material = currentMaterial;
+        holeTransform.DestroyAllChildren();
+
+        var hole = Instantiate(holePrefabs[(int) flightShape % holePrefabs.Length], holeTransform);
+        hole.transform.localPosition = Vector3.zero;
+        hole.transform.localRotation = Quaternion.identity;
     }
 
     void OnTriggerEnter(Collider other)

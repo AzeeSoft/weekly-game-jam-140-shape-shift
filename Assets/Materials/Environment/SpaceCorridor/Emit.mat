@@ -103,4 +103,4 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 0.8000001, g: 0.7946584, b: 0.71572286, a: 1}
-    - _EmissionColor: {r: 2.6082377, g: 2.6082377, b: 2.6082377, a: 1}
+    - _EmissionColor: {r: 13.76636, g: 13.76636, b: 13.76636, a: 1}

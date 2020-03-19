@@ -517,27 +517,27 @@ PrefabInstance:
     - target: {fileID: 179308473515327901, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 179308473515327901, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 179308473515327901, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 179308473515327901, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 179308473515327901, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1047333534964786909, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -689,25 +689,35 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3731876231011081380, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731876231011081380, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3932128606917790119, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3932128606917790119, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3932128606917790119, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3932128606917790119, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4574043261726124995, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -762,52 +772,373 @@ PrefabInstance:
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5529952736669124416, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[0].proceduralLevelUnitPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].scoreRange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 8a2bb51036e46944ab5cbd7e53239dda,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: c7e6aa4bfdccd2946a28432312afdc64,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 4853f7ca9040c9b4cbbf4f3df124c04f,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[0].scoreRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].scoreRange
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 4853f7ca9040c9b4cbbf4f3df124c04f,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 2779bddf541755e4182492b03410ebaa,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4700191370542156797, guid: b3f9d7e80317b3745b5a6c048138fdd9,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: b3691a05ee42b804a9151e59273856d6,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: 5fa39ff2aaa57ba4f893d38548d4c6d3,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].scoreRange
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: b3691a05ee42b804a9151e59273856d6,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: 5fa39ff2aaa57ba4f893d38548d4c6d3,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: ea4c22e5803f0304ca3a1375ac384416,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: e12c87d662ca9a143b4f5521f178f0c7,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: cd35b31c135db384c8f7b9c77c81fe81,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 2a0319de7ba367641933d2aede5fc40d,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 9d71a74dd376bc1438d5a40708c14ba1,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 4582980882726051252, guid: ac20154ecf2a126478bc0a5c418c8fc9,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].scoreRange
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: b3691a05ee42b804a9151e59273856d6,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: 5fa39ff2aaa57ba4f893d38548d4c6d3,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: ea4c22e5803f0304ca3a1375ac384416,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: e12c87d662ca9a143b4f5521f178f0c7,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: cd35b31c135db384c8f7b9c77c81fe81,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 2a0319de7ba367641933d2aede5fc40d,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 9d71a74dd376bc1438d5a40708c14ba1,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[4].proceduralLevelUnitPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 4582980882726051252, guid: ac20154ecf2a126478bc0a5c418c8fc9,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 2719194661630966790, guid: ea4c22e5803f0304ca3a1375ac384416,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[0].proceduralLevelUnitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 8a2bb51036e46944ab5cbd7e53239dda,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[0].proceduralLevelUnitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: c7e6aa4bfdccd2946a28432312afdc64,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[0].proceduralLevelUnitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4700191370542156797, guid: b3f9d7e80317b3745b5a6c048138fdd9,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 2779bddf541755e4182492b03410ebaa,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 4700191370542156797, guid: b3f9d7e80317b3745b5a6c048138fdd9,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 6945280803407234537, guid: 19f88752ac2ea544e96efe3394040b76,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 5942415106834760621, guid: 70bbcb68845b57544a117eff822314a8,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 3696347900891479006, guid: 64332f1fc8c3c874fbb42bb419079185,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: emptyLevelUnitPrefab
+      value: 
+      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[0].proceduralLevelUnitPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[1].proceduralLevelUnitPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 4853f7ca9040c9b4cbbf4f3df124c04f,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 2756809999595399039, guid: 2779bddf541755e4182492b03410ebaa,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelZones.Array.data[3].proceduralLevelUnitPrefabs.Array.data[11]
+      value: 
+      objectReference: {fileID: 4700191370542156797, guid: b3f9d7e80317b3745b5a6c048138fdd9,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: emptyLevelUnitBuffer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933952865270005947, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933952865270005947, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8419808873331689807, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_DefaultActionMap
-      value: 212703cf-1c30-41eb-980f-215d771ac971
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419808873331689807, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8548956626300931518, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8548956626300931518, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8548956626300931518, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8548956626300931518, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8548956626300931518, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a887c086cc5ff48ac72d92817b181a, type: 3}

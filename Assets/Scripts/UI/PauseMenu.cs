@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 {
     public string mainMenuName;
     public GameObject rootPanel;
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
         ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(mainMenuName); });
     }
 
-    void OnPause(InputValue inputValue)
+    public void OnPause()
     {
         if (rootPanel.gameObject.activeInHierarchy)
         {

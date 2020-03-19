@@ -4,6 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[Serializable]
+public class ProceduralLevelZone
+{
+    public int scoreRange = 1000;
+    [HideInInspector] public int cumulativeScoreRange = 0;
+
+    public List<GameObject> proceduralLevelUnitPrefabs;
+    public Randomizer<GameObject> proceduralLevelUnitRandomizer;
+
+    public void Init()
+    {
+        proceduralLevelUnitRandomizer = new Randomizer<GameObject>(proceduralLevelUnitPrefabs);
+    }
+}
+
 public class ProceduralLevelGenerator : MonoBehaviour
 {
     public const int maxLevelUnitsSpawnedPerFrame = 100;
@@ -15,7 +30,9 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     public Transform levelUnitsHolder;
 
-    public List<GameObject> proceduralLevelUnitPrefabs;
+    public GameObject emptyLevelUnitPrefab;
+    public int emptyLevelUnitBuffer = 5;
+    public List<ProceduralLevelZone> proceduralLevelZones;
 
     [Header("Depth Curvature Settings")] [Range(-1, 1)]
     public float curve = 0;
@@ -33,8 +50,11 @@ public class ProceduralLevelGenerator : MonoBehaviour
     private float curCurveSpeed = 0;
     private float curCurveTargetDuration = 0;
     private float timeSinceCurveTargetSet = 0;
+    private int emptyLevelUnitsAdded = 0;
 
-    private Randomizer<GameObject> proceduralLevelUnitRandomizer;
+    private int curLevelZoneIndex = 0;
+    private ProceduralLevelZone curProceduralLevelZone => proceduralLevelZones[curLevelZoneIndex];
+
     private List<ProceduralLevelUnit> proceduralLevelUnits = new List<ProceduralLevelUnit>();
 
     void OnDrawGizmos()
@@ -49,7 +69,16 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     void Awake()
     {
-        proceduralLevelUnitRandomizer = new Randomizer<GameObject>(proceduralLevelUnitPrefabs);
+        int cumulativeScoreRange = 0;
+        for (var i = 0; i < proceduralLevelZones.Count; i++)
+        {
+            proceduralLevelZones[i].Init();
+
+            cumulativeScoreRange += proceduralLevelZones[i].scoreRange;
+            proceduralLevelZones[i].cumulativeScoreRange = cumulativeScoreRange;
+        }
+
+        curLevelZoneIndex = 0;
     }
 
     // Start is called before the first frame update
@@ -63,6 +92,7 @@ public class ProceduralLevelGenerator : MonoBehaviour
         UpdateDepthCurvatureEffect();
         UpdateLevelUnits();
         SpawnLevelUnitsAsNeeded();
+        UpdateLevelZone();
     }
 
     void UpdateDepthCurvatureEffect()
@@ -127,8 +157,18 @@ public class ProceduralLevelGenerator : MonoBehaviour
                 Vector3.Distance(transform.position, nextSpawnPoint) < endOffset) &&
                levelUnitsSpawned < maxLevelUnitsSpawnedPerFrame)
         {
-            var proceduralLevelUnit = Instantiate(proceduralLevelUnitRandomizer.GetRandomItem(), levelUnitsHolder)
-                .GetComponent<ProceduralLevelUnit>();
+            GameObject selectedPrefab;
+            if (emptyLevelUnitsAdded < emptyLevelUnitBuffer)
+            {
+                selectedPrefab = emptyLevelUnitPrefab;
+                emptyLevelUnitsAdded++;
+            }
+            else
+            {
+                selectedPrefab = curProceduralLevelZone.proceduralLevelUnitRandomizer.GetRandomItem();
+            }
+
+            var proceduralLevelUnit = Instantiate(selectedPrefab, levelUnitsHolder).GetComponent<ProceduralLevelUnit>();
             proceduralLevelUnit.transform.position = nextSpawnPoint;
             proceduralLevelUnit.transform.position +=
                 proceduralLevelUnit.transform.position - proceduralLevelUnit.prevConnector.position;
@@ -137,6 +177,18 @@ public class ProceduralLevelGenerator : MonoBehaviour
             nextSpawnPoint = proceduralLevelUnit.nextConnector.position;
 
             levelUnitsSpawned++;
+        }
+    }
+
+    void UpdateLevelZone()
+    {
+        if (LevelManager.Instance)
+        {
+            if (LevelManager.Instance.score > curProceduralLevelZone.cumulativeScoreRange &&
+                (curLevelZoneIndex < proceduralLevelZones.Count - 1))
+            {
+                curLevelZoneIndex++;
+            }
         }
     }
 }

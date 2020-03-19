@@ -58,4 +58,10 @@ public class FlightPlayerInput : MonoBehaviour
     {
         flightModel.flightController.ShapeShiftTo(FlightShape.Star);
     }
+
+    [UsedImplicitly]
+    void OnPause(InputValue inputValue)
+    {
+        PauseMenu.Instance.OnPause();
+    }
 }

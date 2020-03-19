@@ -2867,7 +2867,7 @@ MonoBehaviour:
   mainMenuTextMesh: {fileID: 1912521554}
   highscoreTextMesh: {fileID: 977302089}
   dummyText: {fileID: 1678614247}
-  textChangeSpeed: 7
+  textChangeSpeed: 4.5
   colorChangeSpeed: 1
   textColor1: {r: 0.9294118, g: 0.1137255, b: 0.003921569, a: 1}
   textColor2: {r: 1, g: 0.45882356, b: 0.38431376, a: 1}

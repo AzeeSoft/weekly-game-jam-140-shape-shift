@@ -68,7 +68,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
-    public GameData GetHighscoreData()
+    public GameData GetGameData()
     {
         return SaveSystem.LoadData<GameData>(saveFile);
     }

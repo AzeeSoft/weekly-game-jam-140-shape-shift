@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     public bool canTakeDamage = true;
 
     public UnityEvent OnDamageTaken;
+    public UnityEvent OnHealthAdded;
     public UnityEvent OnHealthDepleted;
 
     private bool healthDepleted = false;
@@ -51,6 +52,9 @@ public class Health : MonoBehaviour
         {
             OnDamageTaken?.Invoke();
             timeOfLastDamage = Time.time;
+        } else if (updateAmount > 0)
+        {
+            OnHealthAdded?.Invoke();
         }
     }
 

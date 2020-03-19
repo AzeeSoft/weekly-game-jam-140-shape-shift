@@ -6,5 +6,12 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
     public int score;
 
-    
+    [Header("References")]
+    public FlightModel flightModel;
+
+    public void UpdateHighScore(string playerName = "Anonymous")
+    {
+        GameManager.Instance.CheckAndSetHighScore(score, playerName);
+    }
+
 }

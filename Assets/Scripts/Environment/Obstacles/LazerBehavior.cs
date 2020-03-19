@@ -7,6 +7,7 @@ public class LazerBehavior : MonoBehaviour
 {
     public float yOffset;
     public float movementSpeed;
+    public float damage = 10;
 
     Sequence lazerSequence;
 
@@ -33,6 +34,7 @@ public class LazerBehavior : MonoBehaviour
         if (otherFM != null)
         {
             print("Hit Lazer!");
+            otherFM.health.TakeDamage(damage);
         }
     }
 }

@@ -15,12 +15,14 @@ public class FlightModel : MonoBehaviour
     public FlightShape curFlightShape => flightController.curFlightShape;
 
     public new Rigidbody rigidbody { get; private set; }
+    public Health health { get; private set; }
     public FlightController flightController { get; private set; }
     public FlightPlayerInput flightPlayerInput { get; private set; }
 
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        health = GetComponent<Health>();
         flightController = GetComponent<FlightController>();
         flightPlayerInput = GetComponent<FlightPlayerInput>();
     }

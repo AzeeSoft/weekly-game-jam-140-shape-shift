@@ -85,7 +85,7 @@ MonoBehaviour:
   - {fileID: 3665209067700127612, guid: 0728f7925be10a541a35ae586e8eb7f1, type: 3}
   curve: 1
   maxCurve: 220
-  minDepthForCurvature: 0.723
+  minDepthForCurvature: 0.72
 --- !u!1 &2434564821661916338
 GameObject:
   m_ObjectHideFlags: 0

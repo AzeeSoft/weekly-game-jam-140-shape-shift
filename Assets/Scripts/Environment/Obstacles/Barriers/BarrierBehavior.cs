@@ -13,6 +13,8 @@ public class BarrierBehavior : MonoBehaviour
     public float acccuracyOffset;
     public FlightShape flightShape;
     public bool autoGenerateBarrierOnEnable = false;
+    public float damage = 20;
+    public float refill = 10;
 
     public BoxCollider barrierCollider;
 
@@ -81,10 +83,12 @@ public class BarrierBehavior : MonoBehaviour
             if (Vector3.Distance(holeTransform.position, other.gameObject.transform.position) <= acccuracyOffset && otherFM.curFlightShape == flightShape)
             {
                 print("Succesfully passed through barrier!");
+                otherFM.health.UpdateHealth(refill);
             }
             else
             {
                 print("Ouch! Missed the Hole / Wrong shape!");
+                otherFM.health.TakeDamage(damage);
             }
         }
     }

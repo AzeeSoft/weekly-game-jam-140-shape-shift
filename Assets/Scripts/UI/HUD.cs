@@ -12,13 +12,13 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI highscoreText;
     public TextMeshProUGUI scoreText;
 
-    public Image damageIndicatorImage;
-    public float damageIndicatorMaxOpacity = 0.7f;
-    public float damageIndicatorAnimationDuration = 0.3f;
+    public float prevHighScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        prevHighScore = GameManager.Instance.GetGameData().highscore;
+
         //LevelManager.Instance.planetHealth.OnDamageTaken.AddListener(IndicateDamage);
     }
 
@@ -30,23 +30,9 @@ public class HUD : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        /*healthBar.fillAmount = LevelManager.Instance.planetHealth.normalizedHealth;
-        healthText.text = $"{LevelManager.Instance.planetHealth.currentHealth:##0}";
-        highscoreText.text = $"Highscore: {Mathf.Max(LevelManager.Instance.score, LevelManager.Instance.GetHighScore()):###,##0}";
-        scoreText.text = $"Score: {LevelManager.Instance.score:###,##0}";*/
-    }
-
-    void IndicateDamage()
-    {
-        damageIndicatorImage.DOKill();
-
-        var tween = damageIndicatorImage.DOFade(damageIndicatorMaxOpacity, damageIndicatorAnimationDuration);
-        tween.OnComplete(() =>
-        {
-            damageIndicatorImage.DOKill();
-            damageIndicatorImage.DOFade(0, damageIndicatorAnimationDuration).Play();
-        });
-
-        tween.Play();
+        healthBar.fillAmount = LevelManager.Instance.flightModel.health.normalizedHealth;
+        healthText.text = $"{LevelManager.Instance.flightModel.health.currentHealth:##0}";
+        highscoreText.text = $"Highscore: {Mathf.Max(LevelManager.Instance.score, prevHighScore):###,###,##0}";
+        scoreText.text = $"Score: {LevelManager.Instance.score:###,###,##0}";
     }
 }

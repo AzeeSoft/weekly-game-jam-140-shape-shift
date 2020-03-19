@@ -10,6 +10,7 @@ public class LazerBehavior : MonoBehaviour
     public float damage = 10;
 
     public bool isHorizontal = false;
+    public AudioClip hitSound;
 
     Sequence lazerSequence;
 
@@ -62,6 +63,7 @@ public class LazerBehavior : MonoBehaviour
         {
             print("Hit Lazer!");
             otherFM.health.TakeDamage(damage);
+            SoundEffectsManager.Instance.Play(hitSound);
         }
     }
 }

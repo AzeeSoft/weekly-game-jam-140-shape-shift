@@ -61,12 +61,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holeTransform: {fileID: 5061976347773592989}
   holeOffset: 0.2
-  acccuracyOffset: 4.5
+  acccuracyOffset: 3.5
   flightShape: 0
   autoGenerateBarrierOnEnable: 0
   damage: 20
-  refill: 5
+  refill: 0
   barrierCollider: {fileID: 5061976347179310124}
+  hitSound: {fileID: 8300000, guid: 401bb204c1f6c5743a033ca7a598f76d, type: 3}
+  refillSound: {fileID: 8300000, guid: c28b25ba12fcbe24b88f1a2e87f76e03, type: 3}
   holePrefabs:
   - {fileID: 1991553600451797139, guid: 2453c3972f1b64944aa5dab107dae8c2, type: 3}
   - {fileID: 4595733491161878994, guid: 943f62dd2c8396142b69efd0661dea34, type: 3}

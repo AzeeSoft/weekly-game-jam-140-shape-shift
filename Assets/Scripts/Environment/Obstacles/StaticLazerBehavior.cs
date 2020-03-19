@@ -5,6 +5,7 @@ using UnityEngine;
 public class StaticLazerBehavior : MonoBehaviour
 {
     public float damage = 10;
+    public AudioClip hitSound;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,6 +15,7 @@ public class StaticLazerBehavior : MonoBehaviour
         {
             print("Hit Lazer!");
             otherFM.health.TakeDamage(damage);
+            SoundEffectsManager.Instance.Play(hitSound);
         }
     }
 }

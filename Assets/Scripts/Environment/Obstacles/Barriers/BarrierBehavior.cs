@@ -18,6 +18,9 @@ public class BarrierBehavior : MonoBehaviour
 
     public BoxCollider barrierCollider;
 
+    public AudioClip hitSound;
+    public AudioClip refillSound;
+
     public GameObject[] holePrefabs;
 
     /*[Header("Debug")]
@@ -95,6 +98,8 @@ public class BarrierBehavior : MonoBehaviour
                 print("Succesfully passed through barrier!");
                 otherFM.health.UpdateHealth(refill);
                 otherFM.PassedThroughBarrier(this, true);
+
+                SoundEffectsManager.Instance.Play(refillSound);
             }
             else
             {
@@ -104,6 +109,8 @@ public class BarrierBehavior : MonoBehaviour
                 print("Hole Shape: " + flightShape);
                 otherFM.health.TakeDamage(damage);
                 otherFM.PassedThroughBarrier(this, false);
+
+                SoundEffectsManager.Instance.Play(hitSound);
             }
         }
     }

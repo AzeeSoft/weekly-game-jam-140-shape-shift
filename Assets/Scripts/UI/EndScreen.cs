@@ -14,6 +14,8 @@ public class EndScreen : MonoBehaviour
     public MenuPage newHighScorePage;
     public TMP_InputField highScorePlayerName;
 
+    public AudioClip gameOverClip;
+
     private float transitionDuration = 1f;
 
     void Awake()
@@ -36,6 +38,8 @@ public class EndScreen : MonoBehaviour
 
     void ShowEndScreen()
     {
+        SoundEffectsManager.Instance.Play(gameOverClip);
+
         Time.timeScale = 0f;
         HelperUtilities.UpdateCursorLock(false);
 

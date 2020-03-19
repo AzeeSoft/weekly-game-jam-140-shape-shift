@@ -501,6 +501,7 @@ MonoBehaviour:
   endGameOptionsPage: {fileID: 6918597850188889559}
   newHighScorePage: {fileID: 6842104850917964615}
   highScorePlayerName: {fileID: 7234478210428143896}
+  gameOverClip: {fileID: 8300000, guid: 33862b2aa88b6f9418978304d1d84f5a, type: 3}
 --- !u!1 &1036198316507554499
 GameObject:
   m_ObjectHideFlags: 0

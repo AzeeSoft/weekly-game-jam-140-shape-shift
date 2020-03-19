@@ -499,6 +499,7 @@ MonoBehaviour:
   flightLookStrength: 45
   flightLookAcceleration: 5
   flightCameraBoundaryOffset: 0.1
+  horizontalRotationMode: 0
   squareMaterial: {fileID: 2100000, guid: 01d6e653ba61d3846afc96e999c55e6f, type: 2}
   triangleMaterial: {fileID: 2100000, guid: 5e26aa7ba464c944b8d4be8469a68b80, type: 2}
   circleMaterial: {fileID: 2100000, guid: a2abf5de2d5c20f479556d6ea43c4f45, type: 2}
@@ -652,7 +653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2825473636754864100
 Transform:
   m_ObjectHideFlags: 0
@@ -673,6 +674,22 @@ Transform:
   m_Father: {fileID: 2825473636179703796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &722412789208755753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5920398138127659656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cf116dbd2b37b4ca6f5a132ee62d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wingsMeshRenderers:
+  - {fileID: 1217089297767195282}
+  - {fileID: 9099780666503423152}
+  blendDuration: 1
 --- !u!1 &6396641196910252588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1021,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5626280233613981421, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5626280233613981421, guid: c61ce21303fa8964f95a69124b68ae73,
+        type: 3}
       propertyPath: m_AABB.m_Center.x
       value: -0.000000014901161
       objectReference: {fileID: 0}
@@ -1037,6 +1059,11 @@ PrefabInstance:
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5626280233613981421, guid: c61ce21303fa8964f95a69124b68ae73,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[3]
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1050,7 +1077,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.84
+      value: -0.435
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
@@ -1095,17 +1122,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.100165
+      value: 4.110779
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.100165
+      value: 4.110779
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.100165
+      value: 4.110779
       objectReference: {fileID: 0}
     - target: {fileID: -2359747773901598927, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
@@ -1150,13 +1177,31 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c61ce21303fa8964f95a69124b68ae73,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61ce21303fa8964f95a69124b68ae73, type: 3}
+--- !u!1 &5920398138127659656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c61ce21303fa8964f95a69124b68ae73,
+    type: 3}
+  m_PrefabInstance: {fileID: 2380319164867079041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7237886471064862875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c61ce21303fa8964f95a69124b68ae73,
+    type: 3}
+  m_PrefabInstance: {fileID: 2380319164867079041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1217089297767195282 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5626280233613981421, guid: c61ce21303fa8964f95a69124b68ae73,
+    type: 3}
+  m_PrefabInstance: {fileID: 2380319164867079041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &9099780666503423152 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2359747773901598927, guid: c61ce21303fa8964f95a69124b68ae73,
     type: 3}
   m_PrefabInstance: {fileID: 2380319164867079041}
   m_PrefabAsset: {fileID: 0}

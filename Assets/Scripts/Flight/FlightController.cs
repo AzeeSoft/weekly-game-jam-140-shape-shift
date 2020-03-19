@@ -10,9 +10,16 @@ public class FlightInput
     public float vertical;
 }
 
+public enum HorizontalRotationMode
+{
+    Yaw,
+    Roll
+}
+
 public class FlightController : MonoBehaviour
 {
-    [Header("References")] public Transform avatar;
+    [Header("References")]
+    public Transform avatar;
 
     [Header("Movement")] public float flightMaxSpeed = 10f;
     public float flightAcceleration = 5f;
@@ -20,6 +27,7 @@ public class FlightController : MonoBehaviour
     public float flightLookStrength = 5f;
     public float flightLookAcceleration = 5f;
     [Range(0, 0.5f)] public float flightCameraBoundaryOffset = 0.1f;
+    public HorizontalRotationMode horizontalRotationMode = HorizontalRotationMode.Roll;
 
     [Header("Shape Shifting")]
     public Material squareMaterial;
@@ -77,7 +85,17 @@ public class FlightController : MonoBehaviour
         // transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * flightLerpFactor);
         transform.position = targetPos;*/
 
-        var rotationAngles = new Vector3(-moveDir.y, 0, -moveDir.x);
+        var rotationAngles = new Vector3(-moveDir.y, 0, 0);
+        switch (horizontalRotationMode)
+        {
+            case HorizontalRotationMode.Roll:
+                rotationAngles.z = -moveDir.x;
+                break;
+            case HorizontalRotationMode.Yaw:
+                rotationAngles.y = moveDir.x;
+                break;
+        }
+
         var targetRot = Quaternion.Euler(rotationAngles * flightLookStrength);
         avatar.transform.rotation =
             Quaternion.Slerp(avatar.transform.rotation, targetRot, Time.fixedDeltaTime * flightLookAcceleration);
@@ -132,5 +150,7 @@ public class FlightController : MonoBehaviour
         {
             renderer.material = selectedMaterial;
         }
+
+        flightModel.FlightShip.UpdateShape();
     }
 }

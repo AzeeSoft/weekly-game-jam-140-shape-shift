@@ -32,7 +32,7 @@ public class FlightPlayerInput : MonoBehaviour
         var move = value.Get<Vector2>();
 
         flightInput.horizontal = move.x;
-        flightInput.vertical = move.y;
+        flightInput.vertical = move.y * (GameManager.Instance.gameData.playerSettings.shouldInvertY ? -1 : 1);
     }
 
     [UsedImplicitly]

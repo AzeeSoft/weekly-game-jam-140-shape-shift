@@ -319,4 +319,14 @@ public static class HelperExtensions
     }
 
     #endregion
+
+    #region SkinnedMeshRenderer
+
+    public static Tween DOBlendShapeWeight(this SkinnedMeshRenderer self, int index, float endValue, float duration)
+    {
+        return DOTween.To(() => self.GetBlendShapeWeight(index), value => self.SetBlendShapeWeight(index, value),
+            endValue, duration).SetTarget(self);
+    }
+
+    #endregion
 }

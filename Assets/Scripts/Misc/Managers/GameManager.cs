@@ -18,6 +18,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         public PlayerSettings playerSettings;
     }
 
+    public GameData gameData { get; private set; }
     public string saveFile;
 
     new void Awake()
@@ -34,17 +35,17 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-        GameData currentData = SaveSystem.LoadData<GameData>(saveFile);
+        gameData = SaveSystem.LoadData<GameData>(saveFile);
         
-        if (currentData == null)
+        if (gameData == null)
         {
-            GameData tempData = new GameData
+            gameData = new GameData
             {
                 highscore = 100,
                 highscorePlayerName = "G.A.T.S"
             };
 
-            SaveSystem.SaveData<GameData>(tempData, saveFile);
+            SaveGameData();
         }
     }
 
@@ -56,20 +57,23 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public void CheckAndSetHighScore(int currentScore, string currentPlayerName)
     {
-        GameData currentHighscoreData = SaveSystem.LoadData<GameData>(saveFile);
-        
-        if (currentHighscoreData.highscore < currentScore)
+        if (gameData.highscore < currentScore)
         {
-            currentHighscoreData.highscore = currentScore;
+            gameData.highscore = currentScore;
 
-            currentHighscoreData.highscorePlayerName = currentPlayerName;
+            gameData.highscorePlayerName = currentPlayerName;
 
-            SaveSystem.SaveData<GameData>(currentHighscoreData, saveFile);
+            SaveGameData();
         }
+    }
+
+    public void SaveGameData()
+    {
+        SaveSystem.SaveData<GameData>(gameData, saveFile);
     }
 
     public GameData GetGameData()
     {
-        return SaveSystem.LoadData<GameData>(saveFile);
+        return gameData;
     }
 }

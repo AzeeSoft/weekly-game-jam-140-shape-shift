@@ -26,6 +26,7 @@ public class FlightModel : MonoBehaviour
     public Health health { get; private set; }
     public FlightController flightController { get; private set; }
     public FlightPlayerInput flightPlayerInput { get; private set; }
+    public FlightShip FlightShip { get; private set; }
 
     public event Action<BarrierBehavior, bool> onPassedThroughBarrier;
 
@@ -35,6 +36,7 @@ public class FlightModel : MonoBehaviour
         health = GetComponent<Health>();
         flightController = GetComponent<FlightController>();
         flightPlayerInput = GetComponent<FlightPlayerInput>();
+        FlightShip = GetComponentInChildren<FlightShip>();
     }
 
     // Start is called before the first frame update

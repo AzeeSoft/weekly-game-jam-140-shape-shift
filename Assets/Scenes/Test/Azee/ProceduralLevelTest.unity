@@ -584,6 +584,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: curveTargetDurationRange.min
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: curveTargetDurationRange.max
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: curveSpeedRange.min
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: curveSpeedRange.max
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1047333535061718884, guid: 63a887c086cc5ff48ac72d92817b181a, type: 3}
     - {fileID: 1047333535061718883, guid: 63a887c086cc5ff48ac72d92817b181a, type: 3}

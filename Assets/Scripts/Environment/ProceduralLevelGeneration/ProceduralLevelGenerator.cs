@@ -20,6 +20,14 @@ public class ProceduralLevelGenerator : MonoBehaviour
     [Range(-1, 1)] public float curve = 0;
     public float maxCurve = 0;
     [Range(0, 1)] public float minDepthForCurvature = 0;
+    public Range curveSpeedRange;
+    public Range curveTargetDurationRange;
+
+    private float curveSource = 0;
+    private float curveTarget = 0;
+    private float curCurveSpeed = 0;
+    private float curCurveTargetDuration = 0;
+    private float timeSinceCurveTargetSet = 0;
 
     private Randomizer<GameObject> proceduralLevelUnitRandomizer;
     private List<ProceduralLevelUnit> proceduralLevelUnits = new List<ProceduralLevelUnit>();
@@ -54,6 +62,19 @@ public class ProceduralLevelGenerator : MonoBehaviour
 
     void UpdateDepthCurvatureEffect()
     {
+        timeSinceCurveTargetSet += Time.deltaTime;
+
+        if (timeSinceCurveTargetSet >= curCurveTargetDuration)
+        {
+            curveTarget = Random.Range(-1f, 1f);
+            curCurveSpeed = curveSpeedRange.GetRandomInRange();
+            curCurveTargetDuration = curveTargetDurationRange.GetRandomInRange();
+            timeSinceCurveTargetSet = 0;
+            curveSource = curve;
+        }
+
+        curve = Mathf.Lerp(curve, curveTarget, Time.deltaTime * curCurveSpeed);
+
         Shader.SetGlobalFloat("DepthCurvatureCurve", HelperUtilities.Remap(curve, -1, 1, -maxCurve, maxCurve));
         Shader.SetGlobalFloat("DepthCurvatureMinDepth", minDepthForCurvature);
     }

@@ -84,8 +84,10 @@ MonoBehaviour:
   levelUnitsHolder: {fileID: 2434564819778078036}
   proceduralLevelUnitPrefabs:
   - {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc, type: 3}
-  - {fileID: 2546695485445567943, guid: 647e4c7df9cb3804c947cfd2cbf6174b, type: 3}
-  - {fileID: 2546695485445567943, guid: c0d95a96243985949b520a12785dbd20, type: 3}
+  - {fileID: 5942415106834760621, guid: 70bbcb68845b57544a117eff822314a8, type: 3}
+  - {fileID: 3696347900891479006, guid: 64332f1fc8c3c874fbb42bb419079185, type: 3}
+  - {fileID: 4582980882726051252, guid: ac20154ecf2a126478bc0a5c418c8fc9, type: 3}
+  - {fileID: 6945280803407234537, guid: 19f88752ac2ea544e96efe3394040b76, type: 3}
   curve: 1
   maxCurve: 220
   minDepthForCurvature: 0.72

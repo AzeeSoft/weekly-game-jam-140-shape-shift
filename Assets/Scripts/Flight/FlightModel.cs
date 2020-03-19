@@ -12,6 +12,8 @@ public enum FlightShape
 
 public class FlightModel : MonoBehaviour
 {
+    public bool switchCurveTargetOnBarrierTrigger = true;
+
     public FlightShape curFlightShape => flightController.curFlightShape;
 
     public new Rigidbody rigidbody { get; private set; }
@@ -39,6 +41,9 @@ public class FlightModel : MonoBehaviour
 
     public void PassedThroughBarrier(BarrierBehavior barrierBehavior)
     {
-        LevelManager.Instance.proceduralLevelGenerator.SwitchCurvetarget();
+        if (switchCurveTargetOnBarrierTrigger)
+        {
+            LevelManager.Instance.proceduralLevelGenerator.CheckAndSwitchCurvetarget();
+        }
     }
 }

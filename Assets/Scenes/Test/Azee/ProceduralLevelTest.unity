@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.08050018, g: 0.26920822, b: 0.6320754, a: 1}
+  m_FogColor: {r: 0.6698113, g: 0.3931783, b: 0.05371129, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -353,6 +353,11 @@ PrefabInstance:
       propertyPath: m_FollowOffset.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1047333535581566219, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: switchCurveTargetOnBarrierTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1047333536445294561, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -583,6 +588,49 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507093, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelUnitPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelUnitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelUnitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2546695485445567943, guid: 647e4c7df9cb3804c947cfd2cbf6174b,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: proceduralLevelUnitPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2546695485445567943, guid: c0d95a96243985949b520a12785dbd20,
+        type: 3}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: autoSwitchCurveTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: curveTargetDurationRange.min
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: curveTargetDurationRange.max
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1047333535061718884, guid: 63a887c086cc5ff48ac72d92817b181a, type: 3}

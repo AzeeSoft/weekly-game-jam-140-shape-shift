@@ -706,11 +706,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 1047333536445294562, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1467382076583871707, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_AnchorMin.y

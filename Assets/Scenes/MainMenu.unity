@@ -3099,7 +3099,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 253.68, y: 50}
+  m_SizeDelta: {x: 340, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1912521554
 MonoBehaviour:
@@ -3119,7 +3119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shape Fit
+  m_text: Astral Angles
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d097656d84a701c48b94c82922783eaa, type: 2}
   m_sharedMaterial: {fileID: 7353342199940750249, guid: d097656d84a701c48b94c82922783eaa,
@@ -3189,7 +3189,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1912521554}
-    characterCount: 9
+    characterCount: 13
     spriteCount: 0
     spaceCount: 1
     wordCount: 2

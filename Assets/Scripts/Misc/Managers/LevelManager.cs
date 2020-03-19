@@ -51,7 +51,10 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
 
     void Update()
     {
-        score += scoreBaseIncreaseRate * Time.deltaTime * scoreMultiplier;
+        if (Time.timeScale > 0)
+        {
+            score += scoreBaseIncreaseRate * Time.deltaTime * scoreMultiplier;
+        }
     }
 
     public void UpdateHighScore(string playerName = "Anonymous")

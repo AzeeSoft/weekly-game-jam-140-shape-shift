@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165bc1a8aa5654e4bb4c82217af4d884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0
+  offset: 18
   movementSpeed: 1
   damage: 10
   isHorizontal: 0

@@ -39,9 +39,19 @@ public class LazerBehavior : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - offset, transform.position.z));
 
-        Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - offset, transform.position.z), 0.5f);
+        if (!isHorizontal)
+        {
+            Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - offset, transform.position.z));
+
+            Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - offset, transform.position.z), 0.5f);
+        }
+        else
+        {
+            Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + offset, transform.position.y, transform.position.z));
+
+            Gizmos.DrawSphere(new Vector3(transform.position.x + offset, transform.position.y, transform.position.z), 0.5f);
+        }
     }
 
     void OnTriggerEnter(Collider other)

@@ -8,26 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Engine_1_Mat
-    second: {fileID: 3796742557001622717, guid: 26457fb7d50cf9040883d877db6f88f0,
-      type: 3}
+    second: {fileID: 2100000, guid: 311780d7127f29047ad1ab386d0baf1c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Engine_2_Mat
-    second: {fileID: 2581070879457790520, guid: 26457fb7d50cf9040883d877db6f88f0,
-      type: 3}
+    second: {fileID: 2100000, guid: fb49a5317fdbcc641976c56c9f48f148, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Engine_3_Mat
-    second: {fileID: -7808749091812797304, guid: 26457fb7d50cf9040883d877db6f88f0,
-      type: 3}
+    second: {fileID: 2100000, guid: 7d9e4b18650fe2b4f98b871c0becfecf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Engine_4_Mat
-    second: {fileID: -871154320284115570, guid: 26457fb7d50cf9040883d877db6f88f0,
-      type: 3}
+    second: {fileID: 2100000, guid: 9b0293d017a31244c974040c4ad638be, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

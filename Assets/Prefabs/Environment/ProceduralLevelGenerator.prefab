@@ -79,9 +79,12 @@ MonoBehaviour:
   endOffset: 1000
   speedRange:
     min: 50
-    max: 100
+    max: 80
   additiveSpeedFactor: 0
   levelUnitsHolder: {fileID: 2434564819778078036}
+  emptyLevelUnitPrefab: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
+    type: 3}
+  emptyLevelUnitBuffer: 5
   proceduralLevelZones:
   - scoreRange: 500
     cumulativeScoreRange: 0

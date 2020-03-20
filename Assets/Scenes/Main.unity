@@ -599,6 +599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEssentials
       objectReference: {fileID: 0}
+    - target: {fileID: 1047333535581566220, guid: 63a887c086cc5ff48ac72d92817b181a,
+        type: 3}
+      propertyPath: flightMaxSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1047333536445294561, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -822,7 +827,7 @@ PrefabInstance:
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: proceduralLevelZones.Array.data[1].scoreRange
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -845,7 +850,7 @@ PrefabInstance:
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
       propertyPath: proceduralLevelZones.Array.data[0].scoreRange
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}
@@ -1041,12 +1046,6 @@ PrefabInstance:
       propertyPath: proceduralLevelZones.Array.data[2].proceduralLevelUnitPrefabs.Array.data[7]
       value: 
       objectReference: {fileID: 3696347900891479006, guid: 64332f1fc8c3c874fbb42bb419079185,
-        type: 3}
-    - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
-        type: 3}
-      propertyPath: emptyLevelUnitPrefab
-      value: 
-      objectReference: {fileID: 3665209067700127612, guid: a1a35cde3d6344c48854e2d05a05c7cc,
         type: 3}
     - target: {fileID: 7243689210168507094, guid: 63a887c086cc5ff48ac72d92817b181a,
         type: 3}

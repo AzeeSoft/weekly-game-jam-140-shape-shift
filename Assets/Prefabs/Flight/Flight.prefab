@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatar: {fileID: 2825473636179703796}
-  flightMaxSpeed: 16
+  flightMaxSpeed: 25
   flightAcceleration: 4
   flightDeceleration: 6
   flightLookStrength: 45
@@ -741,7 +741,7 @@ MonoBehaviour:
   skinnedMeshRenderers:
   - {fileID: 1265272667948406615}
   - {fileID: 9161505543509234037}
-  blendDuration: 1
+  blendDuration: 0.4
   hullMeshRenderer: {fileID: 1265272667948406615}
   thrusterPrefab: {fileID: 5607424342033747698, guid: 81fa2adc89c9c2a4a8d8311f46898e8f,
     type: 3}

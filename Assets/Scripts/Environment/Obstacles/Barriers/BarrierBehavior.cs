@@ -38,9 +38,6 @@ public class BarrierBehavior : MonoBehaviour
         barrierCollider = GetComponent<BoxCollider>();
 
         transformPlacementCoords = new float[] {barrierCollider.bounds.min.x, barrierCollider.bounds.max.x, barrierCollider.bounds.min.y, barrierCollider.bounds.max.y, barrierCollider.bounds.min.z, barrierCollider.bounds.max.z};
-
-        InitializeBarrier();
-        UpdateHole();
     }
 
     void OnEnable()
@@ -111,6 +108,17 @@ public class BarrierBehavior : MonoBehaviour
                 otherFM.PassedThroughBarrier(this, false);
 
                 SoundEffectsManager.Instance.Play(hitSound);
+            }
+        }
+    }
+
+    public void UpdateStencilRef(int i)
+    {
+        foreach (var renderer in GetComponentsInChildren<Renderer>())
+        {
+            foreach (var rendererMaterial in renderer.materials)
+            {
+                rendererMaterial.SetInt("_StencilRef", i);
             }
         }
     }

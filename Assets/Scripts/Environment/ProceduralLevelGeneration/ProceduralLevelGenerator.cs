@@ -55,6 +55,8 @@ public class ProceduralLevelGenerator : MonoBehaviour
     private int curLevelZoneIndex = 0;
     private ProceduralLevelZone curProceduralLevelZone => proceduralLevelZones[curLevelZoneIndex];
 
+    private int curStencilRef = 1;
+
     private List<ProceduralLevelUnit> proceduralLevelUnits = new List<ProceduralLevelUnit>();
 
     void OnDrawGizmos()
@@ -172,6 +174,14 @@ public class ProceduralLevelGenerator : MonoBehaviour
             proceduralLevelUnit.transform.position = nextSpawnPoint;
             proceduralLevelUnit.transform.position +=
                 proceduralLevelUnit.transform.position - proceduralLevelUnit.prevConnector.position;
+
+            foreach (var barrierBehavior in proceduralLevelUnit.GetComponentsInChildren<BarrierBehavior>())
+            {
+                barrierBehavior.UpdateStencilRef(curStencilRef);
+
+                curStencilRef = Mathf.Clamp((curStencilRef + 1) % 256, 1, 255);
+            }
+
             proceduralLevelUnits.Add(proceduralLevelUnit);
 
             nextSpawnPoint = proceduralLevelUnit.nextConnector.position;

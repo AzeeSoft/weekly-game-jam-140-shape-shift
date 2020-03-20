@@ -63,7 +63,7 @@ MonoBehaviour:
   holeOffset: 0.2
   acccuracyOffset: 3.5
   flightShape: 0
-  autoGenerateBarrierOnEnable: 0
+  autoGenerateBarrierOnEnable: 1
   damage: 20
   refill: 0
   barrierCollider: {fileID: 5061976347179310124}
